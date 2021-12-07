@@ -1,33 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | NFT preview card component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+      * {
+        box-sizing: border-box;
+        font-family: "Outfit", sans-serif;
+      }
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
+      body {
+        margin: 0;
+        background-color: #0c1729;
+        color: #fff;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        max-width: 320px;
+        padding: 1rem;
+        background-color: #15273f;
+        border-radius: 0.5rem;
+      }
+      .card__balance {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #8eabd5;
+        padding-bottom: 1rem;
+      }
+      .card__icon {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .card__icon-eth {
+        color: #2af0f0;
+      }
+      .card__icon-time {
+        color: #8eabd5;
+      }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .card__avatar {
+        display: flex;
+        gap: 1rem;
+      }
+      .card__image img {
+        width: 45px;
+        border-radius: 50%;
+        border: 1px solid white;
+      }
+      .card__text span {
+        color: #94a8cb;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <section class="card">
+        <div class="card__img">
+          <img src="images/image-equilibrium.jpg" alt="" />
+        </div>
+        <h2 class="card__title">Equilibrium #3429</h2>
+        <p class="card__text">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <p class="card__balance">
+          <span class="card__icon card__icon-eth"
+            ><img src="images/icon-ethereum.svg" alt="" /> 0.041ETH</span
+          >
+          <span class="card__icon card__icon-time"
+            ><img src="images/icon-clock.svg" alt="" /> 3 days left</span
+          >
+        </p>
+        <div class="card__avatar">
+          <div class="card__image">
+            <img src="images/image-avatar.png" alt="" />
+          </div>
+          <p class="card__text">
+            <span>Creation of </span>
+            Jules Wywern
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
